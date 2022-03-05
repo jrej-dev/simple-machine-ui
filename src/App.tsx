@@ -4,6 +4,7 @@ import * as anchor from '@project-serum/anchor';
 import Home from './Home';
 import Navbar from './components/Navbar';
 import Roadmap from './components/Roadmap';
+import NFTDisplay from './components/NFTDisplay';
 
 import { clusterApiUrl } from '@solana/web3.js';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
@@ -80,6 +81,7 @@ const App = () => {
               rpcHost={rpcHost}
             />
             <Roadmap />
+            <NFTDisplay />
           </WalletDialogProvider>
         </WalletProvider>
       </ConnectionProvider>

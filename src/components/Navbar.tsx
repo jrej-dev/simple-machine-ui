@@ -40,7 +40,7 @@ const Navbar = () => {
             <Title>
                 Titan Dogs
             </Title>
-            <Link href="#roadmap">
+            <Link href="/#roadmap">
                 Roadmap
             </Link>
         </Container>
