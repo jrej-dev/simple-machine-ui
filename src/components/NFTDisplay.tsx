@@ -11,7 +11,6 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 
 const Container = styled("div")`
     width: 100%;
-    height: auto;
     min-height: 200px;
     padding: 4rem 0;
 
@@ -80,11 +79,13 @@ const NFTDisplay = () => {
             let status: number;
             fetch(`${process.env.REACT_APP_BACKEND_URL}/getTokens`, options)
                 .then(res => {
+                    console.log(res);
                     status = res.status;
                     return res.json();
                 })
                 .then(res => {
                     if (status === 200) {
+                        console.log(res.data);
                         if (res && res.pubKey === walletPubkey) {
                             console.log(res.data);
                             setMetaData(res.data);
