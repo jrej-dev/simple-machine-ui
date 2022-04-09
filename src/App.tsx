@@ -50,7 +50,6 @@ const connection = new anchor.web3.Connection(rpcHost
   ? rpcHost
   : anchor.web3.clusterApiUrl('devnet'));
 
-const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
 const txTimeoutInMilliseconds = 30000;
 
 const App = () => {
@@ -76,7 +75,6 @@ const App = () => {
             <Home
               candyMachineId={candyMachineId}
               connection={connection}
-              startDate={startDateSeed}
               txTimeout={txTimeoutInMilliseconds}
               rpcHost={rpcHost}
             />
