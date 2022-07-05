@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const Container = styled("div")`
     width: 100vw;
-    height: auto;
+    height: 100vh;
     margin-top: 100px;
-    padding: 20px;
+    padding: 100px 20px;
     background-color: white;
 
     display: flex;
@@ -19,7 +19,7 @@ const ListItem = styled("li")`
 
 const Roadmap = () => {
     return (
-        <Container>
+        <Container id="roadmap">
             <h1>Roadmap</h1>
             <h1>Q1 2022</h1>
             <ul style={{padding: "0 20%"}}>

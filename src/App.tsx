@@ -4,6 +4,7 @@ import * as anchor from '@project-serum/anchor';
 import Home from './Home';
 import Navbar from './components/Navbar';
 import Roadmap from './components/Roadmap';
+import NFTDisplay from './components/NFTDisplay';
 
 import { clusterApiUrl } from '@solana/web3.js';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
@@ -49,7 +50,6 @@ const connection = new anchor.web3.Connection(rpcHost
   ? rpcHost
   : anchor.web3.clusterApiUrl('devnet'));
 
-const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
 const txTimeoutInMilliseconds = 30000;
 
 const App = () => {
@@ -75,11 +75,12 @@ const App = () => {
             <Home
               candyMachineId={candyMachineId}
               connection={connection}
-              startDate={startDateSeed}
               txTimeout={txTimeoutInMilliseconds}
               rpcHost={rpcHost}
+              network={network}
             />
             <Roadmap />
+            <NFTDisplay />
           </WalletDialogProvider>
         </WalletProvider>
       </ConnectionProvider>
