@@ -77,6 +77,7 @@ const App = () => {
               connection={connection}
               txTimeout={txTimeoutInMilliseconds}
               rpcHost={rpcHost}
+              network={network}
             />
             <Roadmap />
             <NFTDisplay />
